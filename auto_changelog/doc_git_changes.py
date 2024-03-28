@@ -3,18 +3,16 @@ import subprocess
 import json
 import requests
 
-# Function to get the latest git commits
 def get_git_changes():
     # Run the git log command to get the latest commit info
     process = subprocess.Popen(['git', 'log', '-1', '--pretty=format:%H%n%s%n%b'], stdout=subprocess.PIPE)
     output, _ = process.communicate()
     return output.decode('utf-8')
 
-# Function to read the prompt instructions
 def read_prompt(prompt_path):
     with open(prompt_path, 'r') as file:
         return file.read()
-# Function to call CodeGPT API
+    
 def call_codegpt_api(model, prompt, data):
     # Get the API key from the environment variable
     api_key = os.getenv('CODEGPT_API_KEY')
@@ -68,9 +66,11 @@ def save_to_file(filename, content):
 if __name__ == '__main__':
     # TODO: Load settings from /config.json, refactor code to use symbols instead of literals
 
+    templatesdir = os.path.join(os.path.dirname(__file__),'markup-templates')
+    
     # Load the prompt instructions
     prompt_instructions = read_prompt('prompt.md')
-    
+
     # Load templates from /markup-templates/
     html_template = load_template('message/change_message.html')
     xml_template = load_template('message/change_message.xml')
