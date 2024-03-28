@@ -1,0 +1,10 @@
+{
+    "WorkingDirectory": "default",
+    "Output": {
+        "Filetype": "html"
+    },
+    "Update": {
+        "AutoUpdate": true,
+        "Frequency": "Every Commit"
+    }
+}

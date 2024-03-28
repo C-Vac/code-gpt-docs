@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<changelog>
+    <version>{Version}</version>
+    <commit>
+        <hash>{commit_hash}</hash>
+        <message>{commit_message}</message>
+        <notes>{change_notes}</notes>
+    </commit>
+</changelog>
