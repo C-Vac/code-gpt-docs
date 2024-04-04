@@ -1,0 +1,111 @@
+Jump to Content
+CodeGPT API Documentation
+Log In
+Home
+Documentation
+Samples
+API Endpoints
+
+Search
+CTRL-K
+JUMP TO
+CTRL-/
+API CODEGPT V2
+
+Agents 🤖 V2✨
+Create Agent
+POST
+Get Agent
+GET
+List Agents
+GET
+Update Agent
+PATCH
+Delete Agent
+DELETE
+Update Agent Image
+PATCH
+Update Agent Documents
+PATCH
+
+Chat
+
+Users
+
+Documents
+Powered by 
+List Agents
+GET
+https://api-beta.codegpt.co/api/v1/agent
+LOG IN TO SEE FULL REQUEST HISTORY
+TIME	STATUS	USER AGENT	
+Make a request to see history.
+0 Requests This Month
+
+The List function in an AI agents API is useful for obtaining a general overview of the available AI agents, their features, and capabilities, making it easier to select the most suitable agent for a specific task or application.
+
+Example
+
+[
+  {
+    "status": "published",
+    "name": "Agent 1",
+    "documentId": [],
+    "description": "Description of the agent",
+    "prompt": "You are a helpful assistant",
+    "topk": 3,
+    "temperature": 0.7,
+    "model": "gpt-3.5-turbo",
+    "welcome": "Hello, how can I help you?",
+    "maxTokens": 1024,
+    "id": "0000-0000-0000-0000",
+    "user_created": "0000-0000-0000-0000",
+    "date_created": "2023-01-01T12:00:00.000Z"
+  }
+]
+RESPONSES
+
+200
+200
+
+
+401
+401
+
+Updated 2 months ago
+
+Get Agent
+Update Agent
+Did this page help you?
+LANGUAGE
+
+Shell
+
+Node
+
+Ruby
+
+PHP
+
+Python
+AUTHORIZATION
+OAUTH2
+Bearer
+sk-2b2a1631-9567-4c19-ae51-bbdb610c8845
+1
+curl --request GET \
+2
+     --url https://api-beta.codegpt.co/api/v1/agent \
+3
+     --header 'accept: application/json' \
+4
+     --header 'authorization: Bearer sk-2b2a1631-9567-4c19-ae51-bbdb610c8845'
+
+Try It!
+RESPONSE
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+
+200 - Result
+
+401 - Result

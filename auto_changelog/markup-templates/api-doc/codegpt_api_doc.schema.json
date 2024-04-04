@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Agent API Documentation",
+  "type": "object",
+  "properties": {
+    "functionName": {
+      "type": "string",
+      "description": "The name of the function."
+    },
+    "description": {
+      "type": "string",
+      "description": "A description of what the function does."
+    },
+    "params": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        },
+        "required": ["name", "type"]
+      }
+    },
+    "apiCall": {
+      "type": "object",
+      "properties": {
+        "method": {
+          "type": "string"
+        },
+        "endpoint": {
+          "type": "string"
+        },
+        "headers": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "key": {
+                "type": "string"
+              },
+              "value": {
+                "type": "string"
+              }
+            },
+            "required": ["key", "value"]
+          }
+        }
+      },
+      "required": ["method", "endpoint", "headers"]
+    },
+    "exampleResponse": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "userResponse": {
+      "type": "object",
+      "additionalProperties": true
+    }
+  },
+  "required": ["functionName", "description", "params", "apiCall", "exampleResponse", "userResponse"]
+}

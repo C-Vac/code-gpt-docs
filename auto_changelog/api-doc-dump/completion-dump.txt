@@ -1,0 +1,133 @@
+Jump to Content
+CodeGPT API Documentation
+Log In
+Home
+Documentation
+Samples
+API Endpoints
+
+Search
+CTRL-K
+JUMP TO
+CTRL-/
+API CODEGPT V2
+
+Agents 🤖 V2✨
+
+chat
+Completion
+POST
+
+Users
+
+Documents
+Powered by 
+Completion
+POST
+https://api-beta.codegpt.co/api/v1/chat/completions
+LOG IN TO SEE FULL REQUEST HISTORY
+TIME	STATUS	USER AGENT	
+Make a request to see history.
+0 Requests This Month
+
+Description
+The /completion endpoint in the CodeGPT API is designed for user interaction with an AI Agent. To use this endpoint, you send a POST request with a structured JSON object in the body and your API Key in the header.
+
+The API Key should be included in the header as follows: Authorization: Bearer CODEGPT_API_KEY
+
+The JSON object should include the following fields:
+
+agent: This is the unique ID of the AI Agent you want to interact with.
+messages: This is an array of message objects. Each object should include a role (either 'user' or 'assistant') and content (the actual text of the message).
+When you send this request, the AI Agent processes the 'messages', performs a semantic search on its knowledge base, and generates a response. This response, returned by the API, is the "completion".
+
+Example
+
+{
+ 
+  "agentId": "0000-0000-0000-0000",
+  "stream":true,
+  "format":"json"
+  "messages":
+  [{
+    "content": "What is the meaning of life?",
+    "role": "user"
+  }]
+}
+BODY PARAMS
+agentId
+string
+required
+agentId
+
+messages
+json
+format
+string
+"text" or "json"(Default)
+
+stream
+boolean
+false or true(Default)
+
+
+HEADERS
+CodeGPT-Org-Id
+string
+Organization ID that agents and documents belong to.
+
+RESPONSES
+
+200
+200
+
+
+400
+400
+
+
+422
+422
+
+Updated 2 months ago
+
+Update Agent Documents
+Users
+Did this page help you?
+LANGUAGE
+
+Shell
+
+Node
+
+Ruby
+
+PHP
+
+Python
+AUTHORIZATION
+OAUTH2
+Bearer
+sk-2b2a1631-9567-4c19-ae51-bbdb610c8845
+1
+curl --request POST \
+2
+     --url https://api-beta.codegpt.co/api/v1/chat/completions \
+3
+     --header 'accept: application/json' \
+4
+     --header 'authorization: Bearer sk-2b2a1631-9567-4c19-ae51-bbdb610c8845' \
+5
+     --header 'content-type: application/json'
+
+Try It!
+RESPONSE
+Click Try It! to start a request and see the response here! Or choose an example:
+application/json
+
+200 - Result
+
+400 - HTTPValidationError
+text/plain
+
+422 - Result

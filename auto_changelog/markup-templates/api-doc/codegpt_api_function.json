@@ -1,0 +1,31 @@
+{
+  "functionName": "{{functionName}}",
+  "description": "{{description}}",
+  "params": [
+    {
+      "name": "{{paramName}}",
+      "type": "{{paramType}}",
+      "description": "{{paramDescription}}"
+    }
+  ],
+  "apiCall": {
+    "method": "{{apiMethod}}",
+    "endpoint": "{{apiEndpoint}}",
+    "headers": [
+      {
+        "key": "accept",
+        "value": "application/json"
+      },
+      {
+        "key": "authorization",
+        "value": "Bearer {{apiToken}}"
+      }
+    ]
+  },
+  "exampleResponse": {
+    "{{exampleResponseKey}}": "{{exampleResponseValue}}"
+  },
+  "userResponse": {
+    "{{userResponseKey}}": "{{userResponseValue}}"
+  }
+}
